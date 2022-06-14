@@ -1,0 +1,37 @@
+main {
+  text-align: center;
+  color: white;
+  h1 {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    font-family: "Raleway";
+    font-size: 40px;
+  }
+  p {
+    margin-bottom: 40px;
+    font-size: 20px;
+  }
+}
+
+@mixin btn() {
+  display: inline-block;
+  color: white;
+  background-color: $blue;
+  text-decoration: none;
+  font-weight: bold;
+  width: 280px;
+  padding: 20px;
+  border-radius: 30px;
+  transition: all .3s ease-in;
+  &:hover {
+    background-color: $cyan;
+    cursor: pointer
+  }
+}
+.callBtn {
+  @include btn();
+}
+
+.call {
+  background-image: url('../images/bg-curvy-desktop.svg');
+}

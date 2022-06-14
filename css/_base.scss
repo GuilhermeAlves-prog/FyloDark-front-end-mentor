@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+@mixin for-phone-only {
+  @media (max-width: 890px) { @content; }
+}
+@mixin for-mobile {
+  @media (max-width: 770px) { @content; }
+}
+body {
+  font-size: 14px;
+  font-family: "Open Sans",sans-serif;
+  background-color: $testimonials;
+}

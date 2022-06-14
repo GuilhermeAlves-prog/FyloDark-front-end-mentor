@@ -1,0 +1,90 @@
+@mixin paddingadd() {
+  padding-top: 8%;
+}
+footer {
+  background-color: $footer;
+  color: white;
+  display: flex;
+  padding: 200px 60px 60px 60px;
+  justify-content: space-around;
+  .footer-logo {
+    display: block;
+    margin-bottom: 40px;
+  }
+  .content-location {
+    display: inline;
+    margin-left: 10px;
+  }
+  div {
+    &:nth-of-type(1) {
+      width: 300px;
+      p {
+        margin-top: 10px;
+      }
+    }
+    ul {
+      list-style-type: none;
+      li {
+        margin-bottom: 20px;
+      }
+      a {
+        text-decoration: none;
+        color: white;
+        box-sizing: border-box;
+        &:hover {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+  div:nth-of-type(2) {
+    @include paddingadd();
+    p {
+      display: inline;
+      &:after {
+        content: '';
+        display: block;
+        margin-top: 20px;
+      }
+    }
+  }
+  
+  div:nth-of-type(3) {
+    @include paddingadd()
+  }
+  div:nth-of-type(4) {
+    @include paddingadd;
+  }
+  div:nth-of-type(5) {
+    @include paddingadd;
+  }
+
+  @include for-phone-only {
+    flex-direction: column;
+    div {
+      width: 100%;
+    }
+    div:nth-of-type(5) {
+      text-align: center;
+    }
+  }
+  .redes-sociais {
+    a {
+      color: white;
+      border: 1px solid white;
+      display: inline-block;
+      text-align: center;
+      text-decoration: none;
+      margin-left: 10px;
+      width: 40px;
+      border-radius: 50%;
+      &:hover {
+        color: $cyan;
+        border-color: inherit;
+      }
+      i {
+        padding: 10px;
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+header {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  padding: 60px;
+  ul {
+    list-style-type: none;
+    li {
+      display: inline-block;
+      margin-left: 40px;
+      a {
+        text-decoration: none;
+        color: white;
+        &:hover {
+          font-weight: 700;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
